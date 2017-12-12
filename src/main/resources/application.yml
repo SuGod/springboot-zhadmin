@@ -1,0 +1,32 @@
+
+
+server:
+  port: 8080
+
+#springboot会自动加载spring.datasource.*相关配置，数据源就会自动注入到sqlSessionFactory中，sqlSessionFactory会自动注入到Mapper中，一切都不用管了，直接拿起来使用就行了。
+#在启动类中添加对mapper包扫描@MapperScan
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://localhost:3306/test_db?characterEncoding=utf8&useSSL=true
+        username: root
+        password: 123456
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+
+
