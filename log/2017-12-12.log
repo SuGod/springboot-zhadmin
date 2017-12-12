@@ -1,0 +1,579 @@
+2017-12-12 14:48:47.488 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 初始化环境变量
+2017-12-12 14:48:47.800 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2017-12-12 14:48:52.596 [restartedMain] INFO  cn.zzdee.zhadmin.ZhadminApplication - Starting ZhadminApplication on ZhangdideMacBook-Air.local with PID 7851 (/Users/zhangdi/WorkSpace/Project/ZhAdmin/target/classes started by zhangdi in /Users/zhangdi/WorkSpace/Project/ZhAdmin)
+2017-12-12 14:48:52.597 [restartedMain] DEBUG cn.zzdee.zhadmin.ZhadminApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2017-12-12 14:48:52.597 [restartedMain] INFO  cn.zzdee.zhadmin.ZhadminApplication - No active profile set, falling back to default profiles: default
+2017-12-12 14:48:52.631 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 初始化环境变量完成
+2017-12-12 14:48:53.218 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/zhangdi/WorkSpace/Project/ZhAdmin/target/classes/cn/zzdee/zhadmin/mapper/UserMapper.class]
+2017-12-12 14:48:53.218 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cn.zzdee.zhadmin.mapper.UserMapper' mapperInterface
+2017-12-12 14:48:53.218 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2017-12-12 14:48:54.018 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2017-12-12 14:48:54.019 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-12 14:48:54.078 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-12-12 14:48:54.239 [localhost-startStop-1] ERROR org.springframework.boot.context.embedded.tomcat.TomcatStarter - Error starting Tomcat context. Exception: java.lang.IllegalArgumentException. Message: Filter must not be null
+2017-12-12 14:48:54.259 [restartedMain] WARN  org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+2017-12-12 14:48:54.272 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application startup failed
+org.springframework.context.ApplicationContextException: Unable to start embedded container; nested exception is org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:137)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at cn.zzdee.zhadmin.ZhadminApplication.main(ZhadminApplication.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.context.embedded.EmbeddedServletContainerException: Unable to start embedded Tomcat
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:123)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.<init>(TomcatEmbeddedServletContainer.java:84)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getTomcatEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:554)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory.getEmbeddedServletContainer(TomcatEmbeddedServletContainerFactory.java:179)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.createEmbeddedServletContainer(EmbeddedWebApplicationContext.java:164)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.onRefresh(EmbeddedWebApplicationContext.java:134)
+	... 11 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Filter must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:134)
+	at org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.onStartup(AbstractFilterRegistrationBean.java:219)
+	at org.springframework.boot.web.servlet.FilterRegistrationBean.onStartup(FilterRegistrationBean.java:42)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.selfInitialize(EmbeddedWebApplicationContext.java:229)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.access$000(EmbeddedWebApplicationContext.java:89)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext$1.onStartup(EmbeddedWebApplicationContext.java:213)
+	at org.springframework.boot.context.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:55)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5196)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1419)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1409)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-12 14:52:36.623 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 初始化环境变量
+2017-12-12 14:52:36.794 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2017-12-12 14:52:41.699 [restartedMain] INFO  cn.zzdee.zhadmin.ZhAdminApplication - Starting ZhAdminApplication on ZhangdideMacBook-Air.local with PID 7937 (/Users/zhangdi/WorkSpace/Project/ZhAdmin/target/classes started by zhangdi in /Users/zhangdi/WorkSpace/Project/ZhAdmin)
+2017-12-12 14:52:41.700 [restartedMain] DEBUG cn.zzdee.zhadmin.ZhAdminApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2017-12-12 14:52:41.700 [restartedMain] INFO  cn.zzdee.zhadmin.ZhAdminApplication - No active profile set, falling back to default profiles: default
+2017-12-12 14:52:41.734 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 初始化环境变量完成
+2017-12-12 14:52:42.317 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/zhangdi/WorkSpace/Project/ZhAdmin/target/classes/cn/zzdee/zhadmin/mapper/UserMapper.class]
+2017-12-12 14:52:42.317 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cn.zzdee.zhadmin.mapper.UserMapper' mapperInterface
+2017-12-12 14:52:42.317 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2017-12-12 14:52:43.089 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2017-12-12 14:52:43.089 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-12 14:52:43.145 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-12-12 14:52:43.791 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2017-12-12 14:52:43.804 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2017-12-12 14:52:43.804 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2017-12-12 14:52:43.805 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T/
+2017-12-12 14:52:43.814 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2017-12-12 14:52:43.815 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2017-12-12 14:52:43.820 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2017-12-12 14:52:48.855 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2017-12-12 14:52:48.855 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2017-12-12 14:52:48.855 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2017-12-12 14:52:48.859 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2017-12-12 14:52:48.859 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2017-12-12 14:52:48.860 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2017-12-12 14:52:48.860 [restartedMain] WARN  net.sf.ehcache.config.CacheConfiguration - Configuration problem for cache resourceCache: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2017-12-12 14:52:48.878 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T
+2017-12-12 14:52:48.878 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T/.ehcache-diskstore.lock
+2017-12-12 14:52:48.878 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.data
+2017-12-12 14:52:48.878 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2017-12-12 14:52:48.884 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T/resource%0043ache.index
+2017-12-12 14:52:48.884 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2017-12-12 14:52:48.913 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2017-12-12 14:52:48.914 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2017-12-12 14:52:48.914 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2017-12-12 14:52:48.914 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2017-12-12 14:52:48.914 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2017-12-12 14:52:48.922 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2017-12-12 14:52:48.923 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2017-12-12 14:52:48.923 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2017-12-12 14:52:48.924 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2017-12-12 14:52:48.924 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2017-12-12 14:52:48.924 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2017-12-12 14:52:48.925 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2017-12-12 14:52:48.925 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2017-12-12 14:52:48.928 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2017-12-12 14:52:48.928 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2017-12-12 14:52:48.928 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2017-12-12 14:52:48.966 [restartedMain] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - initialising the handler methods
+2017-12-12 14:52:48.968 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:52:49.210 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2017-12-12 14:52:49.261 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2017-12-12 14:52:50.150 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2017-12-12 14:52:50.227 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2017-12-12 14:52:50.259 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2017-12-12 14:52:50.273 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 应用刷新
+2017-12-12 14:52:50.278 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-12 14:52:50.285 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2017-12-12 14:52:50.297 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-12-12 14:52:50.316 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 应用已启动完成
+2017-12-12 14:52:50.316 [restartedMain] INFO  cn.zzdee.zhadmin.ZhAdminApplication - Started ZhAdminApplication in 23.879 seconds (JVM running for 34.58)
+2017-12-12 14:53:36.983 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-12 14:53:37.016 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-ui.html
+2017-12-12 14:53:37.016 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-ui.html
+2017-12-12 14:53:37.023 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-ui.html]
+2017-12-12 14:53:37.057 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:53:37.057 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:53:37.057 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:53:37.057 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/typography.css]
+2017-12-12 14:53:37.057 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:53:37.057 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/reset.css]
+2017-12-12 14:53:37.058 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:53:37.058 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:53:37.058 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/screen.css]
+2017-12-12 14:53:37.058 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:53:37.058 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:53:37.058 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js]
+2017-12-12 14:53:37.060 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:53:37.060 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:53:37.060 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js]
+2017-12-12 14:53:37.062 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:53:37.063 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:53:37.063 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js]
+2017-12-12 14:53:37.067 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:53:37.067 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:53:37.067 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:53:37.067 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:53:37.067 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:53:37.067 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js]
+2017-12-12 14:53:37.067 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js]
+2017-12-12 14:53:37.068 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/lodash.min.js]
+2017-12-12 14:53:37.068 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:53:37.068 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/swagger-ui.min.js]
+2017-12-12 14:53:37.068 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js]
+2017-12-12 14:53:37.068 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/backbone-min.js]
+2017-12-12 14:53:37.076 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js]
+2017-12-12 14:53:37.076 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js]
+2017-12-12 14:53:37.076 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jsoneditor.min.js]
+2017-12-12 14:53:37.076 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:53:37.076 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/swagger-oauth.js]
+2017-12-12 14:53:37.076 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/marked.js]
+2017-12-12 14:53:37.083 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:53:37.083 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:53:37.083 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/springfox.js]
+2017-12-12 14:53:37.085 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:53:37.086 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:53:37.086 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/logo_small.png]
+2017-12-12 14:53:37.096 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:53:37.097 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:53:37.097 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/print.css]
+2017-12-12 14:53:37.239 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/ui
+2017-12-12 14:53:37.239 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/ui
+2017-12-12 14:53:37.239 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/ui]
+2017-12-12 14:53:37.338 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources
+2017-12-12 14:53:37.338 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources
+2017-12-12 14:53:37.338 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources]
+2017-12-12 14:53:37.357 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /v2/api-docs
+2017-12-12 14:53:37.357 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /v2/api-docs
+2017-12-12 14:53:37.357 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:53:37.412 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/security
+2017-12-12 14:53:37.413 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/security
+2017-12-12 14:53:37.413 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/security]
+2017-12-12 14:53:45.556 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /v2/api-docs
+2017-12-12 14:53:45.556 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /v2/api-docs
+2017-12-12 14:53:45.556 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:53:45.564 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/security
+2017-12-12 14:53:45.564 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/security
+2017-12-12 14:53:45.564 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/security]
+2017-12-12 14:54:14.137 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-ui.html
+2017-12-12 14:54:14.137 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-ui.html
+2017-12-12 14:54:14.137 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-ui.html]
+2017-12-12 14:54:14.151 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:54:14.151 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:54:14.151 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:54:14.151 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:54:14.151 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/typography.css]
+2017-12-12 14:54:14.151 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/screen.css]
+2017-12-12 14:54:14.165 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:54:14.165 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:54:14.166 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/print.css]
+2017-12-12 14:54:14.306 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /v2/api-docs
+2017-12-12 14:54:14.306 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /v2/api-docs
+2017-12-12 14:54:14.306 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:54:14.317 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/security
+2017-12-12 14:54:14.317 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/security
+2017-12-12 14:54:14.317 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/security]
+2017-12-12 14:54:24.514 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-ui.html/demo
+2017-12-12 14:54:24.514 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-ui.html/demo
+2017-12-12 14:54:24.515 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-ui.html/demo]
+2017-12-12 14:54:24.519 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /error
+2017-12-12 14:54:24.520 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /error
+2017-12-12 14:54:24.520 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/error]
+2017-12-12 14:54:26.521 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-ui.html
+2017-12-12 14:54:26.521 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-ui.html
+2017-12-12 14:54:26.521 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-ui.html]
+2017-12-12 14:54:26.537 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:54:26.537 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:54:26.537 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:54:26.537 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:54:26.537 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:54:26.538 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/reset.css]
+2017-12-12 14:54:26.538 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:54:26.537 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:54:26.538 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:54:26.538 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/screen.css]
+2017-12-12 14:54:26.538 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js]
+2017-12-12 14:54:26.538 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:54:26.538 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:54:26.538 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js]
+2017-12-12 14:54:26.539 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:54:26.539 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/typography.css]
+2017-12-12 14:54:26.539 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:54:26.540 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js]
+2017-12-12 14:54:26.545 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js]
+2017-12-12 14:54:26.545 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js]
+2017-12-12 14:54:26.545 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/lodash.min.js]
+2017-12-12 14:54:26.545 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:54:26.545 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js]
+2017-12-12 14:54:26.546 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/swagger-ui.min.js]
+2017-12-12 14:54:26.546 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/backbone-min.js]
+2017-12-12 14:54:26.552 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:54:26.552 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:54:26.552 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js]
+2017-12-12 14:54:26.553 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:54:26.553 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:54:26.553 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js]
+2017-12-12 14:54:26.555 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:54:26.555 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:54:26.555 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jsoneditor.min.js]
+2017-12-12 14:54:26.556 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:54:26.556 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:54:26.555 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:54:26.556 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:54:26.556 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/swagger-oauth.js]
+2017-12-12 14:54:26.556 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:54:26.557 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:54:26.557 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/marked.js]
+2017-12-12 14:54:26.557 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/springfox.js]
+2017-12-12 14:54:26.562 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:54:26.563 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:54:26.563 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/logo_small.png]
+2017-12-12 14:54:26.566 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:54:26.566 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:54:26.566 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/print.css]
+2017-12-12 14:54:26.691 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /v2/api-docs
+2017-12-12 14:54:26.691 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /v2/api-docs
+2017-12-12 14:54:26.691 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:54:26.703 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/security
+2017-12-12 14:54:26.704 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/security
+2017-12-12 14:54:26.704 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/security]
+2017-12-12 14:55:34.902 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-ui.html
+2017-12-12 14:55:34.902 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-ui.html
+2017-12-12 14:55:34.902 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-ui.html]
+2017-12-12 14:55:34.919 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:55:34.920 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:55:34.920 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:55:34.920 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:55:34.919 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:55:34.920 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/screen.css]
+2017-12-12 14:55:34.919 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:55:34.920 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:55:34.920 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js]
+2017-12-12 14:55:34.920 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:55:34.920 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/reset.css]
+2017-12-12 14:55:34.920 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:55:34.920 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:55:34.920 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:55:34.921 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:55:34.921 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/typography.css]
+2017-12-12 14:55:34.920 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js]
+2017-12-12 14:55:34.921 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js]
+2017-12-12 14:55:34.927 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:55:34.927 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:55:34.927 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:55:34.927 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:55:34.927 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/lodash.min.js]
+2017-12-12 14:55:34.928 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/backbone-min.js]
+2017-12-12 14:55:34.928 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js]
+2017-12-12 14:55:34.928 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js]
+2017-12-12 14:55:34.928 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/swagger-ui.min.js]
+2017-12-12 14:55:34.928 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:55:34.928 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js]
+2017-12-12 14:55:34.935 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:55:34.935 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:55:34.935 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js]
+2017-12-12 14:55:34.936 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:55:34.936 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:55:34.936 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js]
+2017-12-12 14:55:34.936 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:55:34.936 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:55:34.937 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jsoneditor.min.js]
+2017-12-12 14:55:34.937 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:55:34.937 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:55:34.937 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/marked.js]
+2017-12-12 14:55:34.937 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:55:34.938 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:55:34.938 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/swagger-oauth.js]
+2017-12-12 14:55:34.943 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:55:34.943 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:55:34.943 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/springfox.js]
+2017-12-12 14:55:34.944 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:55:34.944 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:55:34.944 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/logo_small.png]
+2017-12-12 14:55:34.956 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:55:34.956 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:55:34.956 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/print.css]
+2017-12-12 14:55:35.064 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/ui
+2017-12-12 14:55:35.064 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/ui
+2017-12-12 14:55:35.064 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/ui]
+2017-12-12 14:55:35.116 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources
+2017-12-12 14:55:35.116 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources
+2017-12-12 14:55:35.116 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources]
+2017-12-12 14:55:35.133 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /v2/api-docs
+2017-12-12 14:55:35.133 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /v2/api-docs
+2017-12-12 14:55:35.133 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:55:35.138 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/favicon-32x32.png
+2017-12-12 14:55:35.138 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/favicon-32x32.png
+2017-12-12 14:55:35.138 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/favicon-32x32.png]
+2017-12-12 14:55:35.147 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/security
+2017-12-12 14:55:35.147 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/security
+2017-12-12 14:55:35.147 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/security]
+2017-12-12 14:55:35.149 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/favicon-16x16.png
+2017-12-12 14:55:35.149 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/favicon-16x16.png
+2017-12-12 14:55:35.149 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/favicon-16x16.png]
+2017-12-12 14:55:38.273 [Thread-11] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 应用关闭
+2017-12-12 14:56:11.461 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 初始化环境变量
+2017-12-12 14:56:11.637 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property
+2017-12-12 14:56:16.544 [restartedMain] INFO  cn.zzdee.zhadmin.ZhAdminApplication - Starting ZhAdminApplication on ZhangdideMacBook-Air.local with PID 8013 (/Users/zhangdi/WorkSpace/Project/ZhAdmin/target/classes started by zhangdi in /Users/zhangdi/WorkSpace/Project/ZhAdmin)
+2017-12-12 14:56:16.545 [restartedMain] DEBUG cn.zzdee.zhadmin.ZhAdminApplication - Running with Spring Boot v1.5.9.RELEASE, Spring v4.3.13.RELEASE
+2017-12-12 14:56:16.546 [restartedMain] INFO  cn.zzdee.zhadmin.ZhAdminApplication - No active profile set, falling back to default profiles: default
+2017-12-12 14:56:16.580 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 初始化环境变量完成
+2017-12-12 14:56:17.151 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/zhangdi/WorkSpace/Project/ZhAdmin/target/classes/cn/zzdee/zhadmin/mapper/UserMapper.class]
+2017-12-12 14:56:17.151 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cn.zzdee.zhadmin.mapper.UserMapper' mapperInterface
+2017-12-12 14:56:17.151 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2017-12-12 14:56:17.902 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2017-12-12 14:56:17.902 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.23
+2017-12-12 14:56:17.959 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-12-12 14:56:18.587 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+2017-12-12 14:56:18.599 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+2017-12-12 14:56:18.600 [restartedMain] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2017-12-12 14:56:18.600 [restartedMain] DEBUG net.sf.ehcache.config.DiskStoreConfiguration - Disk Store Path: /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T/
+2017-12-12 14:56:18.609 [restartedMain] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with Configuration Object
+2017-12-12 14:56:18.610 [restartedMain] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+2017-12-12 14:56:18.615 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+2017-12-12 14:56:23.649 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2017-12-12 14:56:23.649 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2017-12-12 14:56:23.649 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2017-12-12 14:56:23.654 [restartedMain] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+2017-12-12 14:56:23.654 [restartedMain] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+2017-12-12 14:56:23.654 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+2017-12-12 14:56:23.655 [restartedMain] WARN  net.sf.ehcache.config.CacheConfiguration - Configuration problem for cache resourceCache: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+2017-12-12 14:56:23.664 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T
+2017-12-12 14:56:23.664 [restartedMain] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T/.ehcache-diskstore.lock
+2017-12-12 14:56:23.664 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.data
+2017-12-12 14:56:23.664 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2017-12-12 14:56:23.668 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file /var/folders/hq/pfq6f4ss3rl1cd842cqbxgm00000gn/T/resource%0043ache.index
+2017-12-12 14:56:23.668 [restartedMain] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file resource%0043ache.index
+2017-12-12 14:56:23.698 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2017-12-12 14:56:23.699 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2017-12-12 14:56:23.699 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2017-12-12 14:56:23.699 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+2017-12-12 14:56:23.700 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2017-12-12 14:56:23.707 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+2017-12-12 14:56:23.707 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+2017-12-12 14:56:23.707 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+2017-12-12 14:56:23.708 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+2017-12-12 14:56:23.708 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+2017-12-12 14:56:23.708 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+2017-12-12 14:56:23.709 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+2017-12-12 14:56:23.709 [restartedMain] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+2017-12-12 14:56:23.712 [restartedMain] DEBUG net.sf.ehcache.Cache - Initialised cache: resourceCache
+2017-12-12 14:56:23.712 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'resourceCache'.
+2017-12-12 14:56:23.712 [restartedMain] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'resourceCache'.
+2017-12-12 14:56:23.750 [restartedMain] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - initialising the handler methods
+2017-12-12 14:56:23.751 [restartedMain] INFO  springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:56:23.974 [restartedMain] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2017-12-12 14:56:24.016 [restartedMain] DEBUG org.mybatis.spring.SqlSessionFactoryBean - Property 'mapperLocations' was not specified or no matching resources found
+2017-12-12 14:56:24.647 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2017-12-12 14:56:24.726 [restartedMain] INFO  springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2017-12-12 14:56:24.758 [restartedMain] INFO  springfox.documentation.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2017-12-12 14:56:24.766 [restartedMain] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Adding return parameter of type Ljava/util/List<Lcn/zzdee/zhadmin/entity/User;>;
+2017-12-12 14:56:24.767 [restartedMain] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Reading parameters models for handlerMethod |getUsers|
+2017-12-12 14:56:24.767 [restartedMain] DEBUG springfox.documentation.spring.web.readers.operation.OperationModelsProvider - Finished reading parameters models for handlerMethod |getUsers|
+2017-12-12 14:56:24.768 [restartedMain] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationModelsProvider - Reading parameters models for handlerMethod |getUsers|
+2017-12-12 14:56:24.772 [restartedMain] DEBUG springfox.documentation.schema.DefaultModelProvider - Skipping model of type Ljava/util/List<Lcn/zzdee/zhadmin/entity/User;>; as its either a container type, map, enum or base type, or its already been handled
+2017-12-12 14:56:24.773 [restartedMain] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Did not find any parameter models for java.util.List<cn.zzdee.zhadmin.entity.User>
+2017-12-12 14:56:24.774 [restartedMain] DEBUG springfox.documentation.schema.DefaultModelDependencyProvider - Adding type for parameter Lcn/zzdee/zhadmin/entity/User;
+2017-12-12 14:56:24.775 [restartedMain] DEBUG springfox.documentation.schema.DefaultModelDependencyProvider - Recursively resolving dependencies for parameter Lcn/zzdee/zhadmin/entity/User;
+2017-12-12 14:56:24.788 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property id
+2017-12-12 14:56:24.791 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-12-12 14:56:24.792 [restartedMain] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'id' renamed to 'id'
+2017-12-12 14:56:24.792 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property id to model
+2017-12-12 14:56:24.793 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-12-12 14:56:24.793 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-12-12 14:56:24.793 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-12-12 14:56:24.795 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getId
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property username
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getUsername
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'username' renamed to 'username'
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property username to model
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getUsername
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getUsername
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getUsername
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getUsername
+2017-12-12 14:56:24.798 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property password
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getPassword
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'password' renamed to 'password'
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property password to model
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getPassword
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getPassword
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getPassword
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getPassword
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property nickname
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getNickname
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'nickname' renamed to 'nickname'
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property nickname to model
+2017-12-12 14:56:24.799 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getNickname
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getNickname
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getNickname
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getNickname
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property age
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'age' renamed to 'age'
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property age to model
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getAge
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Reading property sex
+2017-12-12 14:56:24.800 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getSex
+2017-12-12 14:56:24.801 [restartedMain] DEBUG springfox.documentation.schema.property.ObjectMapperBeanPropertyNamingStrategy - Name 'sex' renamed to 'sex'
+2017-12-12 14:56:24.801 [restartedMain] DEBUG springfox.documentation.schema.property.OptimizedModelPropertiesProvider - Adding property sex to model
+2017-12-12 14:56:24.801 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getSex
+2017-12-12 14:56:24.801 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getSex
+2017-12-12 14:56:24.801 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getSex
+2017-12-12 14:56:24.801 [restartedMain] DEBUG springfox.documentation.schema.property.bean.BeanModelProperty - Evaluating unwrapped getter for member getSex
+2017-12-12 14:56:24.811 [restartedMain] DEBUG springfox.documentation.schema.DefaultModelProvider - Inferred 6 properties. Properties found age, id, nickname, password, sex, username
+2017-12-12 14:56:24.812 [restartedMain] DEBUG springfox.documentation.spring.web.scanners.ApiModelReader - Adding a new model with key User
+2017-12-12 14:56:24.818 [restartedMain] DEBUG springfox.documentation.spring.web.readers.operation.OperationResponseClassReader - Setting spring response class to: List
+2017-12-12 14:56:24.820 [restartedMain] DEBUG springfox.documentation.swagger.readers.operation.OperationAuthReader - Authorization count 0 for method getUsers
+2017-12-12 14:56:24.828 [restartedMain] DEBUG springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader - Setting response class to:List
+2017-12-12 14:56:24.832 [restartedMain] DEBUG springfox.documentation.swagger.readers.operation.VendorExtensionsReader - Extension count 1 for method getUsers
+2017-12-12 14:56:24.858 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 应用刷新
+2017-12-12 14:56:24.863 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-12 14:56:24.871 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2017-12-12 14:56:24.887 [restartedMain] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-12-12 14:56:24.906 [restartedMain] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 应用已启动完成
+2017-12-12 14:56:24.907 [restartedMain] INFO  cn.zzdee.zhadmin.ZhAdminApplication - Started ZhAdminApplication in 23.64 seconds (JVM running for 34.283)
+2017-12-12 14:56:31.179 [http-nio-8080-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-12-12 14:56:31.207 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-ui.html
+2017-12-12 14:56:31.207 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-ui.html
+2017-12-12 14:56:31.208 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-ui.html]
+2017-12-12 14:56:31.234 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:56:31.234 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:56:31.234 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:56:31.234 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js
+2017-12-12 14:56:31.234 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:56:31.234 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js]
+2017-12-12 14:56:31.234 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/reset.css
+2017-12-12 14:56:31.234 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/reset.css]
+2017-12-12 14:56:31.234 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/screen.css
+2017-12-12 14:56:31.235 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/screen.css]
+2017-12-12 14:56:31.235 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:56:31.235 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.slideto.min.js
+2017-12-12 14:56:31.235 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/typography.css
+2017-12-12 14:56:31.235 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js]
+2017-12-12 14:56:31.235 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:56:31.235 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js
+2017-12-12 14:56:31.235 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js]
+2017-12-12 14:56:31.235 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/typography.css]
+2017-12-12 14:56:31.244 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/lodash.min.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/lodash.min.js]
+2017-12-12 14:56:31.244 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js]
+2017-12-12 14:56:31.244 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:56:31.244 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js]
+2017-12-12 14:56:31.245 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js
+2017-12-12 14:56:31.245 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js]
+2017-12-12 14:56:31.245 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:56:31.245 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/swagger-ui.min.js
+2017-12-12 14:56:31.245 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:56:31.245 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/swagger-ui.min.js]
+2017-12-12 14:56:31.245 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/backbone-min.js
+2017-12-12 14:56:31.245 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/backbone-min.js]
+2017-12-12 14:56:31.254 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:56:31.254 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:56:31.254 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js
+2017-12-12 14:56:31.254 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/jsoneditor.min.js
+2017-12-12 14:56:31.254 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/jsoneditor.min.js]
+2017-12-12 14:56:31.254 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:56:31.254 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js
+2017-12-12 14:56:31.254 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js]
+2017-12-12 14:56:31.254 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js]
+2017-12-12 14:56:31.254 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:56:31.255 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/marked.js
+2017-12-12 14:56:31.255 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/marked.js]
+2017-12-12 14:56:31.255 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:56:31.255 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/lib/swagger-oauth.js
+2017-12-12 14:56:31.255 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/lib/swagger-oauth.js]
+2017-12-12 14:56:31.261 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:56:31.261 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/springfox.js
+2017-12-12 14:56:31.261 [http-nio-8080-exec-3] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/springfox.js]
+2017-12-12 14:56:31.262 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:56:31.262 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/logo_small.png
+2017-12-12 14:56:31.262 [http-nio-8080-exec-8] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/logo_small.png]
+2017-12-12 14:56:31.272 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:56:31.272 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/css/print.css
+2017-12-12 14:56:31.272 [http-nio-8080-exec-1] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/css/print.css]
+2017-12-12 14:56:31.377 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/ui
+2017-12-12 14:56:31.377 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/ui
+2017-12-12 14:56:31.377 [http-nio-8080-exec-10] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/ui]
+2017-12-12 14:56:31.443 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources
+2017-12-12 14:56:31.443 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources
+2017-12-12 14:56:31.443 [http-nio-8080-exec-5] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources]
+2017-12-12 14:56:31.458 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/favicon-32x32.png
+2017-12-12 14:56:31.458 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/favicon-32x32.png
+2017-12-12 14:56:31.458 [http-nio-8080-exec-4] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/favicon-32x32.png]
+2017-12-12 14:56:31.470 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /v2/api-docs
+2017-12-12 14:56:31.470 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /v2/api-docs
+2017-12-12 14:56:31.470 [http-nio-8080-exec-2] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Returning handler method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2017-12-12 14:56:31.476 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/favicon-16x16.png
+2017-12-12 14:56:31.476 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/favicon-16x16.png
+2017-12-12 14:56:31.476 [http-nio-8080-exec-6] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/favicon-16x16.png]
+2017-12-12 14:56:31.609 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /swagger-resources/configuration/security
+2017-12-12 14:56:31.610 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /swagger-resources/configuration/security
+2017-12-12 14:56:31.610 [http-nio-8080-exec-7] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/swagger-resources/configuration/security]
+2017-12-12 14:56:38.405 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Looking up handler method for path /webjars/springfox-swagger-ui/images/throbber.gif
+2017-12-12 14:56:38.405 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - looking up handler for path: /webjars/springfox-swagger-ui/images/throbber.gif
+2017-12-12 14:56:38.405 [http-nio-8080-exec-9] DEBUG springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping - Did not find handler method for [/webjars/springfox-swagger-ui/images/throbber.gif]
+2017-12-12 14:57:40.406 [Thread-11] DEBUG cn.zzdee.zhadmin.config.listener.ApplicationEventListener - 应用关闭
