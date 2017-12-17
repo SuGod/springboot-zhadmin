@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 
 @SpringBootApplication
-@MapperScan("cn.zzdee.zhadmin.mapper")  //扫描mapper包
+@MapperScan("cn.zzdee.zhadmin.dao")  //扫描mapper包
 public class ZhadminApplication {
 
     public static void main(String[] args) {

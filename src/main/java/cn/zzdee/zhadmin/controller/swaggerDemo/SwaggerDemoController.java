@@ -1,13 +1,14 @@
 package cn.zzdee.zhadmin.controller.swaggerDemo;
 
 
+import cn.zzdee.zhadmin.dao.UserDao;
 import cn.zzdee.zhadmin.entity.User;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.List;
 
 @RestController
@@ -15,14 +16,15 @@ import java.util.List;
 public class SwaggerDemoController {
 
 
+    @Resource
+    private UserDao userDao;
 
-    @ApiOperation(value="获取用户列表", notes="获取用户列表")
-    @RequestMapping(value = "/users",method= RequestMethod.GET)
-    public List<User> getUsers(){
+    @ApiOperation(value = "获取用户列表", notes = "获取用户列表")
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public List<User> getUsers() {
 
-        List<User> users = new ArrayList<>();
 
-        return users;
+        return userDao.findAll();
     }
 
 }

@@ -77,4 +77,16 @@ public class User extends BaseEntity {
     public void setSex(Sex sex) {
         this.sex = sex;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", nickname='" + nickname + '\'' +
+                ", age=" + age +
+                ", sex=" + sex +
+                '}';
+    }
 }
