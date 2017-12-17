@@ -19,7 +19,7 @@ public interface UserDao {
     /**
      * 为了演示@resultMap的用法,这里故意把数据库字段命名为 _ 方式,entity 为驼峰命名.
      *
-     * Results 给Id 复用.
+     * 使用@Results 映射entity和数据库表字段 给Id 复用.
      * @return
      */
 
